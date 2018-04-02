@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+ 
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+
+    
+    
+	
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.extensions.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" rel="stylesheet">
+
+    <title>FacetoFace | Home </title>
+   
+    
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div id="root"></div>
+    <script>
+      var fullpage;
+      
+      $(document).ready(function(){
+
+      $('.leftarrow').hover(function(){
+         
+         $('.rightarrow').addClass('depreciate');
+
+      });
+
+      $('.linka').hover(function(){
+        
+        $('.activevideo').fadeOut(500).removeClass('activevideo'); 
+        $($(this).attr('video-id')).fadeIn(500);
+        $($(this).attr('video-id')).addClass('activevideo'); 
+       
+    });
+
+/*
+    fullpage=$('#fullpage').fullpage({
+		//Navigation
+		menu: '#menu',
+		lockAnchors: false,
+		anchors:['##firstPage', '##secondPage','##thirdPage', '##fourthPage'],
+		navigation: false,
+		navigationPosition: 'right',
+		navigationTooltips: ['firstSlide', 'secondSlide'],
+		showActiveTooltip: false,
+		slidesNavigation: false,
+		slidesNavPosition: 'bottom',
+
+		//Scrolling
+		css3: true,
+		scrollingSpeed: 500,
+		autoScrolling: false,
+		fitToSection: true,
+		fitToSectionDelay: 1000,
+		scrollBar: false,
+		loopBottom: false,
+		loopTop: false,
+		loopHorizontal: true,
+		continuousVertical: false,
+		continuousHorizontal: false,
+		scrollHorizontally: false,
+		interlockedSlides: false,
+		dragAndMove: false,
+		offsetSections: false,
+		resetSliders: false,
+		fadingEffect: false,
+		normalScrollElements: '#element1, .element2',
+		scrollOverflow: false,
+		scrollOverflowReset: false,
+		scrollOverflowOptions: null,
+		touchSensitivity: 15,
+		normalScrollElementTouchThreshold: 5,
+		bigSectionsDestination: null,
+
+		//Accessibility
+		keyboardScrolling: true,
+		animateAnchor: true,
+		recordHistory: true,
+
+		//Design
+		controlArrows: false,
+		verticalCentered: true,
+		sectionsColor : ['', ''],
+		paddingTop: '0px',
+		paddingBottom: '10px',
+		fixedElements: '',
+		responsiveWidth: 0,
+		responsiveHeight: 0,
+		responsiveSlides: true,
+		parallax: true,
+		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+		//Custom selectors
+		sectionSelector: '.section',
+		slideSelector: '.slide',
+
+		lazyLoading: false,
+
+		//events
+		onLeave: function(index, nextIndex, direction){
+      if(index==1&&nextIndex==2)
+      {
+       
+
+		$.fn.fullpage.setAutoScrolling(0);
+      }
+    },
+		afterLoad: function(anchorLink, index){},
+		afterRender: function(){},
+		afterResize: function(){},
+		afterResponsive: function(isResponsive){},
+		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+      
+    },
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+	});
+    
+*/
+      
+    
+        
+
+      })
+
+            
+    </script>
+
+<script type="text/javascript" gwd-events="support" src="http://facetofaceuae.com/gwd-events-support.1.0.js"></script>
+<script type="text/javascript" gwd-events="handlers">
+setTimeout(function(){ $('#video-bg').fadeIn(8000);$('#video-bg').addClass('activevideo') }, 1300);
+  </script>
+
+  <!--About- Page animation-->
+
+  <script>
+     
+  </script>
+
+    
+  </body>
+</html>
