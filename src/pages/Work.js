@@ -78,36 +78,25 @@ class Work extends Component {
     return (
           <div id="wordpage">
           <TopNavigation />
-          <div id="fullwidthbg" >
+          <div id="fullwidthbg" className="workbg" >
              
                  <div className="column-content">
                       <div className="center-text">
-                          <div className="htmlNoPages">
-                          <p className="gwd-p-1yng gwd-gen-wpkhgwdanimation" id="Menu"><a href="" className="linka" video-id="#video-bg">About</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka" video-id="#video-bg2">Culture</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka">People</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Clients</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Work</a>&nbsp;
-                          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Contact</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                               <div class="title-landing">
-                                <p className="gwd-p-v0bs gwd-gen-pb6igwdanimation">face to face / mcgarry bowen</p>
-                                <p className="gwd-p-1j10 gwd-gen-1t75gwdanimation">we are</p>
-                                <div className="gwd-div-3vay gwd-gen-bfytgwdanimation"></div>
-                                <div className="gwd-animation-event event-1-animation" data-event-name="event-1" data-event-time="4500" id="trig"></div>
+                          
+                          <p className="gwd-p-1yng gwd-gen-wpkhgwdanimation" id="Menu"></p>
+                               <div className="title-landing">
+                                  <h2 className="main-heading"> it’s not creative unless it works</h2>
+                                  <p>With more than 20 years’ experience at combining creative and marketing, face to face creates <br/>
+                                       award-winning projects and creative campaigns both online and offline. Browse through our case  <br/>
+                                       studies, get inspired and learn more about how storytelling brands are mad.</p> <br/>
                                </div> 
-                            </div>
+                            
                       </div>
                       
                  </div>
                  
                       <img src="assests/images/arrow.png" className="scrollbtn bounce"/>
-                      <video autoPlay loop muted id="video-bg" className="og-1">
-
-                        <source src="http://facetofaceuae.com/videof2f.mp4" type="video/mp4" />
-
-                    </video>
-
-                    <video autoPlay loop muted id="video-bg2" >
-
-                        <source src="http://ak2.picdn.net/shutterstock/videos/4493552/preview/stock-footage-open-business-office-with-busy-staff-members-high-quality-hd-video-footage.mp4" type="video/mp4" />
-
-                    </video>
+                      
               </div>
 
 
