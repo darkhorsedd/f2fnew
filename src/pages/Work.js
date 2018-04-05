@@ -106,7 +106,7 @@ class Work extends Component {
                
 
                 <Slider {...settings}>
-                    <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image.jpg"/><h2>Barbican. This is us.</h2></div></div>
+                    <div class="clip"><div><a href="#/portfolio/100-YEARS-OF-ZAYED"><img src="http://www.facetofaceuae.com/newimages/creative-image.jpg"/><h2>Barbican. This is us.</h2></a></div></div>
                     <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image2.jpg"/><h2>Barbican. This is us.</h2></div></div>
                     <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image3.jpg"/><h2>Barbican. This is us.</h2></div></div>    
                     <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image2.jpg"/><h2>Barbican. This is us.</h2></div></div>              

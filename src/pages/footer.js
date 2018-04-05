@@ -37,8 +37,8 @@ class Footer extends Component  {
 
                <hr/>
                <div className="container">
-                  <div class="row">
-                       <div class="col-lg-12 copy-rt"> ©2018 face to face / mcgarrybowen. All rights reserved.</div>
+                  <div className="row">
+                       <div className="col-lg-12 copy-rt"> ©2018 face to face / mcgarrybowen. All rights reserved.</div>
                   </div>
                 
                </div>

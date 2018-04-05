@@ -47,12 +47,47 @@ class Home extends Component {
 
     componentDidMount()
     {
-  
+          window.scrollTo(0,0);
            this.makeAjaxCall(this.state.limit);
            this.screenAnimation();
            this.Section();
- 
+           var lastScrollTop = 0;
+           this.scrollSection();
 
+           window.postions=[{
+               'top':[{
+                   'next':'rec'
+               }],
+
+
+           }];
+
+    }
+
+    scrollSection(){
+
+        $(window).scroll(function(e){
+            
+                        /*var postion= $('#section2').offset().top;
+                      
+                       
+                        $('html,body').animate({
+                            scrollTop: $('#section2').offset().top},
+                            1600); 
+                            */
+                           var st = $(this).scrollTop();
+                           
+                            if(st < window.lastScrollTop) {
+            
+                                
+                                console.log('up 1');
+                            }
+                            else {
+                                console.log('down 1');
+                            }
+                            window.lastScrollTop = st;
+                    })    
+             
     }
 
     screenAnimation()
@@ -60,9 +95,11 @@ class Home extends Component {
         var controller = new ScrollMagic.Controller();
         var tween1 = new TimelineMax();
         tween1.add([
+            TweenMax.to('.vd', 0.01, {css:{'z-index':'0'}}),
             TweenMax.to('#Menu', 0.5, {css:{opacity:0, top: -300}}),
-            TweenMax.to(".title-landing", 0.5, {scale:0}),
-            TweenMax.to(".top-nav-containerwrap", 0.5, {opacity:1,delay:0.4})
+            TweenMax.to(".title-landing", 0.6, {css:{left:"-400px",scale:0,top:-300}}),
+            TweenMax.to(".top-nav-containerwrap", 0.5, {opacity:1,delay:0.4}),
+            TweenMax.to(".scrollwrap", 0.5, {scale:0})
         ]);
           
           
@@ -79,6 +116,8 @@ class Home extends Component {
             controller.addScene([
             scene1,
                 ]);
+        
+            
 
     }
 
@@ -119,13 +158,24 @@ class Home extends Component {
           <div id="fullpage">
          
           <div class="section" id="section1">
+          <video autoPlay loop controls muted id="video-bg" className="og-1 vd">
+
+                        <source src="http://facetofaceuae.com/videof2f.mp4" type="video/mp4"  />
+
+                    </video>
+
+                    <video autoPlay loop muted id="video-bg2" className="vd">
+
+                        <source src="http://ak2.picdn.net/shutterstock/videos/4493552/preview/stock-footage-open-business-office-with-busy-staff-members-high-quality-hd-video-footage.mp4" type="video/mp4" />
+
+                    </video>
               <div id="fullwidthbg" >
                  <div className="column-content">
                       <div className="center-text">
                           <div className="htmlNoPages">
                           <p className="gwd-p-1yng gwd-gen-wpkhgwdanimation" id="Menu"><a href="" className="linka" video-id="#video-bg">About</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka" video-id="#video-bg2">Culture</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka">People</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Clients</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Work</a>&nbsp;
                           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Contact</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                          <div class="title-landing">
+                          <div className="title-landing">
   <p className="gwd-p-v0bs gwd-gen-pb6igwdanimation">face to face / mcgarry bowen</p>
   <p className="gwd-p-1j10 gwd-gen-1t75gwdanimation">we are</p>
   <div className="gwd-div-3vay gwd-gen-bfytgwdanimation"></div>
@@ -134,18 +184,8 @@ class Home extends Component {
                             </div>
                       </div>
                  </div>
-                      <img src="assests/images/arrow.png" className="scrollbtn bounce"/>
-                      <video autoPlay loop muted id="video-bg" className="og-1">
-
-                        <source src="http://facetofaceuae.com/videof2f.mp4" type="video/mp4" />
-
-                    </video>
-
-                    <video autoPlay loop muted id="video-bg2" >
-
-                        <source src="http://ak2.picdn.net/shutterstock/videos/4493552/preview/stock-footage-open-business-office-with-busy-staff-members-high-quality-hd-video-footage.mp4" type="video/mp4" />
-
-                    </video>
+                 <div className="scrollwrap"><div className="scroll-text">Scroll</div><span class="scroll-line init"></span></div>
+                      
               </div>
         </div> 
             <div className="sections" id="section2">

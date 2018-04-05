@@ -138,6 +138,7 @@ body {
   font-size:40px;
   font-weight:300;
   color:#bd246b;
+  margin-bottom: 20px;
 
 }
 
@@ -379,9 +380,19 @@ p {
     padding-bottom:50px;
   }
   .img-thumbnail{
-    border:0px;
-    background-color: transparent;
+   background-color: transparent;
+   margin-bottom: 24px;
+
   }
+
+  .img-thumbnail:hover{
+    -webkit-box-shadow: -1px -2px 23px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -2px 23px -5px rgba(0,0,0,0.75);
+    box-shadow: -1px -2px 23px -5px rgba(0,0,0,0.75);
+    transform:scale(1.1,1.1);
+
+  }
+     
 
   .Footer {
    
@@ -732,8 +743,8 @@ color:#fff !important;
    }
 
    .main-logo {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 22px;
 
    }
 
@@ -751,12 +762,7 @@ color:#fff !important;
         opacity   : 1;
     }
 }
-#homeclientlogo img {
 
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  filter:grey;
-}
 .contactVideo{
   position: absolute;
   right: 0;
@@ -790,10 +796,7 @@ color:#fff !important;
   margin-top: -30px;
   opacity: 0.9;
 }
-.clientsh {
-  /*font-size: 69px;
-  text-transform: uppercase;*/
-}
+
 
 .center {
 
@@ -1865,4 +1868,267 @@ margin: 0 auto;
 
 .workbg {
   background-image: url('http://www.facetofaceuae.com/newimages/bg-about.jpg');
+}
+
+.workinnerpage{
+  background-color:#fff !important;
+}
+.workinnerpage .column-content{
+  background-color: transparent !important;
+
+}
+
+.main-visual {
+  width: 54%;
+  margin: 0 auto;
+  
+}
+
+#Portfolio h2{
+  text-transform: inherit;
+}
+
+iframe {
+  border:0;
+}
+
+#casestudycontent {
+  background-color: #fff;
+  z-index: 3;
+  padding-top: 65px;
+  position: relative;
+}
+
+.sm-container {
+  width:580px;
+  margin:0 auto;
+}
+
+.results h6 {
+  color:#bc246b;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom:20px;
+}
+
+
+.results h6:after {
+  content: '';
+  width: 95%;
+  margin-left: 5px;
+  position: absolute;
+  height: 1px;
+  background-color: #c2246b;
+  top: 17px;
+}
+.factwrapper {
+  width: 100%;
+  height: 170px;
+  border-radius: 102px;
+  background-color: #bc246b;
+  text-align:center;
+  transform: scale(0,0);
+}
+
+figure{
+  font-family: 'Ubuntu', sans-serif;
+  font-size:60px;
+  font-weight:500;
+  color:#fff;
+  text-align:center;
+  padding-top: 20px;
+  margin-bottom: 0;
+  
+  
+}
+.factwrapper span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size:16px;
+  font-weight:500;
+  color:#fff;
+  text-align:center;
+
+}
+
+.clientbg {
+  background-image: url('http://www.facetofaceuae.com/newimages/bg-about.jpg');
+}
+
+.contactbg {
+  background-image: url('http://www.facetofaceuae.com/newimages/bg-about.jpg');
+}
+.contactpersonimg{
+ text-align:right;
+}
+.name{
+  font-family: 'Ubuntu', sans-serif;
+  font-size:20px;
+  font-weight:500;
+  color:#000;
+}
+
+.npos{
+  font-family: 'Ubuntu', sans-serif;
+  font-size:16px;
+  font-weight:300;
+  color:#000;
+}
+
+.email
+{
+  font-family: 'Ubuntu', sans-serif;
+  font-size:16px;
+  font-weight:500;
+  color:#000;
+}
+
+.contactperson{
+  margin-bottom:30px;
+  border-right:solid 12px #41a1a7;
+}
+.mark{
+  margin-left:18px;
+  background-color: transparent;
+  padding-top:0px;
+}
+
+#Contact hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #000;
+  width: 86%;
+  left: 10px;
+  position: relative;
+}
+span.numbers {
+  font-family: 'Ubuntu', sans-serif;
+  font-size:18px;
+  font-weight:500;
+  color:#000;
+  margin-left:30px;
+}
+span.numbers span {
+  color:#41a1a7;
+}
+#contact input[type="text"]{
+  height:40px;
+  margin-bottom:10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:18px;
+  padding-left:20px;
+}
+
+#contact textarea{
+  height:200px;
+  width:100%;
+}
+
+center .text {
+  text-align: left;
+}
+
+.btnsubmit .buttonprojects {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+#contacthr {
+  width: 100% !important;
+  left: 0px !important;
+}
+
+#Contact a {
+  color:#000;
+}
+
+.scroll-line {
+  height: 65px;
+  width: 1px;
+  background: #8a8c8f;
+  position: relative;
+  bottom: 0vh;
+  display: block;
+  overflow: hidden;
+  left: 7%;
+
+}
+.scroll-line:after {
+  content: '';
+  width: inherit;
+  height: 50%;
+  background: #fff;
+  position: absolute;
+  transform: translateY(0%) scaleY(0);
+  left: 0;
+  z-index: 10;
+  display: block;
+}
+
+.scroll-line.init:after {
+  -webkit-animation: mymove 1.5s infinite linear;
+  animation: mymove 1.5s infinite linear;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.scrollwrap{
+  position: absolute;
+  bottom: 0vh;
+  left: 10%; 
+  z-index: 9;
+}
+
+.scroll-text {
+  -moz-transform: rotate(-90.0deg);
+  -o-transform: rotate(-90.0deg);
+  -webkit-transform: rotate(-90.0deg);
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  transform: rotate(-90.0deg);
+  position: absolute;
+  top: -33px;
+  left: -18px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #8a8c8f;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@keyframes mymove{
+  0%{
+      -webkit-transform:translateY(0%) scaleY(0)
+  }
+  10%{
+      -webkit-transform:translateY(0%) scaleY(0.5)
+  }
+  30%{
+      -webkit-transform:translateY(50%) scaleY(1)
+  }
+  45%{
+      -webkit-transform:translateY(200%) scaleY(0.5)
+  }
+  55%{
+      -webkit-transform:translateY(200%) scaleY(0)
+  }
+  100%{
+      -webkit-transform:translateY(200%) scaleY(0)
+  }
+}
+
+.gwd-p-v0bs,.gwd-p-1j10
+{
+  font-weight:500 !important;
+}
+
+.vd{
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index:1;
+    
+}
+.title-landing {
+  position:relative;
 }
