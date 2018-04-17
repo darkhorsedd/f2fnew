@@ -86,7 +86,7 @@ class About extends Component {
               <div className="container"> 
                       <div className="row">
                             <div className="col-lg-6">
-                                  <h3 className="born-in">
+                                  <h3 className="born-in" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
                                   born in <br/>
                                   1995
                                   </h3>
@@ -94,37 +94,37 @@ class About extends Component {
                             </div>
 
                             <div className="col-lg-6">
-                               <div className="textboxabout">    
+                               <div className="textboxabout" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">    
                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id hendrerit ex. Nulla in lacus cursus, vgravida massa in, auctor augue. Aliquam tempus vel eros a aliquam. Aenean sit amet purus commodo, ullamcorper lorem id, faucibus justo.
                                </div>
                             </div>
                        </div>
-                       <div class="row">
+                       <div class="row" data-aos="zoom-in-down" data-aos-offset="500" data-aos-easing="ease-in-sine">
                            <div className="col-lg-12">
                              <img src="http://facetofaceuae.com/newimages/aboutmap.jpg"/>
-                             <div className="Dubai">Dubai</div>
+                             <div className="Dubai" data-aos="zoom-in" data-aos-delay="200" data-aos-offset="500" data-aos-easing="ease-in-sine">Dubai</div>
                              <div className="pulsecontainer">
                                  <img src="http://facetofaceuae.com/newimages/pulse.png"/>
-                                  <div class="pulse-ring"></div>
+                                  <div class="pulse-ring" data-aos="fade-right" data-aos-offset="800" data-aos-delay="100" data-aos-easing="ease-in-sine"></div>
                              </div>
                              
                            </div>
                        </div>
                        <div className="spacer"></div>
-                       <div class="row about-copy">
+                       <div class="row about-copy" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
                            <div className="col-lg-12">
                                
-                               <h2 id="approach">our approach</h2>  
+                               <h2 id="approach" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">our approach</h2>  
                             </div>
 
                             <div className="col-lg-6">
                               <div className="aboutVideo">
-                                 <iframe width="370" height="370" src="https://www.youtube.com/embed/kQrZNDsji4c" frameborder="0"></iframe>
+                                 <iframe width="370" height="370" src="https://www.youtube.com/embed/538s1xXJEMM" frameborder="0"></iframe>
                             </div>
                             </div>
 
                             <div className="col-lg-5">
-                              <div className="textarea">
+                              <div className="textarea" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus nisl nunc, ut venenatis lorem consequat rhoncus. Vivamus auctor ut metus eu malesuada.
                                 <br/><br/>
                                Nam in felis ac nunc tristique suscipit non at lectus. Vivamus nec justo quis sem fermentum facilisis vitae at ligula. Sed vitae quam erat. Vivamus mattis posuere arcu eget auctor. Sed rutrum tincidunt dolor quis pharetra.
@@ -139,12 +139,12 @@ class About extends Component {
                              
                     </div>
 
-                    <div className="spacer"></div>
+                    <div className="spacer trigger-2"></div>
 
                     <div class="row">
                            <div className="col-lg-12">
                                
-                               <h2 >random facts about us</h2>  
+                               <h2 data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">random facts about us</h2>  
                             </div>
                      </div>
 
@@ -156,11 +156,13 @@ class About extends Component {
                                     { /* Fact Box */} 
                                     <div class="row">
                                         <div className="col-lg-12">
-                                                  <div className="circle">
+                                                  <div className="circle" data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center">
+                                                           <div  data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center">
                                                             <img src="http://facetofaceuae.com/newimages/flag.png" />
 
                                                             <h4>17</h4>
                                                             <h6>nationalities</h6>
+                                                           </div>  
                                                   </div>
                                         </div>
                                     </div>
@@ -169,11 +171,13 @@ class About extends Component {
                                     { /* Fact Box */} 
                                     <div class="row">
                                         <div className="col-lg-12">
-                                                  <div className="circle">
+                                                  <div className="circle" data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center">
+                                                          <div data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center">  
                                                             <img src="http://facetofaceuae.com/newimages/award.png" />
 
                                                             <h4>18</h4>
                                                             <h6>awards</h6>
+                                                          </div> 
                                                   </div>
                                         </div>
                                     </div>
@@ -181,12 +185,14 @@ class About extends Component {
 
                                     { /* Fact Box */} 
                                     <div class="row">
-                                        <div className="col-lg-12">
-                                                  <div className="circle">
+                                        <div className="col-lg-12" >
+                                                  <div className="circle" data-aos="zoom-in-down" data-aos-delay="100" data-aos-anchor-placement="top-center">
+                                                         <div data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center"> 
                                                             <img src="http://facetofaceuae.com/newimages/brain.png" />
 
                                                             <h4>312</h4>
                                                             <h6>years of combined experience</h6>
+                                                        </div> 
                                                   </div>
                                         </div>
                                     </div>
@@ -201,11 +207,12 @@ class About extends Component {
                                     
                                     <div class="row">
                                         <div className="col-lg-12">
-                                                  <div className="circle">
+                                                  <div className="circle" data-aos="zoom-in-down" data-aos-delay="150" data-aos-anchor-placement="top-center">
+                                                          <div data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center">  
                                                             <img src="http://facetofaceuae.com/newimages/building.png" />
-
                                                             <h4>26</h4>
                                                             <h6>floors up</h6>
+                                                          </div>  
                                                   </div>
                                         </div>
                                     </div>
@@ -213,11 +220,13 @@ class About extends Component {
 
                                     <div class="row">
                                         <div className="col-lg-12">
-                                                  <div className="circle">
+                                                  <div className="circle" data-aos="zoom-in-down" data-aos-delay="150" data-aos-anchor-placement="top-center">
+                                                          <div  data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center">  
                                                             <img src="http://facetofaceuae.com/newimages/target.png" />
 
                                                             <h4>82</h4>
                                                             <h6>markets where our work has run</h6>
+                                                          </div>  
                                                   </div>
                                         </div>
                                     </div>
@@ -226,11 +235,12 @@ class About extends Component {
 
                                     <div class="row">
                                         <div className="col-lg-12">
-                                                  <div className="circle">
+                                                  <div className="circle" data-aos="zoom-in-down" data-aos-delay="150" data-aos-anchor-placement="top-center">
+                                                           <div data-aos="zoom-in-down" data-aos-delay="200" data-aos-anchor-placement="top-center"> 
                                                             <img src="http://facetofaceuae.com/newimages/cups.png" />
-
                                                             <h4>52,127</h4>
                                                             <h6>cups of tea last year</h6>
+                                                           </div> 
                                                   </div>
                                         </div>
                                     </div>

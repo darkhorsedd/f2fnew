@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TopNavigation from '../pages/TopNavigation';
 import Footer from '../pages/footer';
 import Fade from 'react-reveal/Fade';
+import Scrolltotop from '../components/scrolltotop';
 import Tilt from 'react-tilt';
 import axios from 'axios';
 import Projectcard from '../components/projectcard';
@@ -20,7 +21,9 @@ class Home extends Component {
         this.state = {
             isHovered:"",
             projectdata:"",
-            limit:"0"
+            limit:"0",
+            limitMax:6,
+            loading:0
         };
       }
 
@@ -33,13 +36,25 @@ class Home extends Component {
 
     changeProjects()
     {
-        var newLimit = this.state.limit + 2;
+        var newLimit = parseInt(this.state.limit) + parseInt(2);
+        
+        if(newLimit>this.state.limitMax)
+          {
+            newLimit='0';
+          }
+         
         this.makeAjaxCall(newLimit);
         this.state.limit = newLimit;
+        console.log(this.state.limit);
     }
     changeProjectsBack()
-    {
-        var newLimit = this.state.limit - 2;
+    {   
+        var newLimit = parseInt(this.state.limit) - parseInt(2);
+         
+        if(newLimit<0)
+        {
+            newLimit='6'; 
+        }
         this.makeAjaxCall(newLimit);
         this.state.limit = newLimit;
     }
@@ -54,13 +69,7 @@ class Home extends Component {
            var lastScrollTop = 0;
            this.scrollSection();
 
-           window.postions=[{
-               'top':[{
-                   'next':'rec'
-               }],
-
-
-           }];
+          
 
     }
 
@@ -98,8 +107,8 @@ class Home extends Component {
             TweenMax.to('.vd', 0.01, {css:{'z-index':'0'}}),
             TweenMax.to('#Menu', 0.5, {css:{opacity:0, top: -300}}),
             TweenMax.to(".title-landing", 0.6, {css:{left:"-400px",scale:0,top:-300}}),
-            TweenMax.to(".top-nav-containerwrap", 0.5, {opacity:1,delay:0.4}),
-            TweenMax.to(".scrollwrap", 0.5, {scale:0})
+            TweenMax.to(".top-nav-containerwrap", 0.5, {opacity:1,delay:0.5}),
+            TweenMax.to(".sc1", 0.5, {scale:0})
         ]);
           
           
@@ -126,7 +135,7 @@ class Home extends Component {
         axios
         .get('http://facetofaceuae.com/dev/vimto2017/service/api/Vimto/gethomeproject/?limitblock='+limit)
         .then((response) => {
-          this.setState({projectdata: response.data,loading:0});
+          this.setState({projectdata: response.data,loading:1});
           
           //this.setState({name: response.data.name});
         })
@@ -140,15 +149,18 @@ class Home extends Component {
     Section()
     {
         $('.sections').height(window.innerHeight);
-        //$( ".sections" ).wrap( "<div class='sections-inner'></div>" );
+        $('.right-illusion').css('top',((window.innerHeight-$('#work').height())-14)/2);
+    
     }
+
+    
 
   render() {
    
     const btnClass = this.state.isHovered ? "dep" : "";
 
-    
-      
+    const hidd = "";//this.state.limitMax<=this.state.limit ? 'hidden' : '';
+    const hidd2 ="";//this.state.limitMax==this.state.limit ? '' : 'hidden';  
 
     return (
         <div>
@@ -173,7 +185,7 @@ class Home extends Component {
                  <div className="column-content">
                       <div className="center-text">
                           <div className="htmlNoPages">
-                          <p className="gwd-p-1yng gwd-gen-wpkhgwdanimation" id="Menu"><a href="" className="linka" video-id="#video-bg">About</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka" video-id="#video-bg2">Culture</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka">People</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Clients</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Work</a>&nbsp;
+                          <p className="gwd-p-1yng gwd-gen-wpkhgwdanimation" id="Menu"><a href="" className="linka" video-id="#video-bg">About</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="" className="linka" video-id="#video-bg2">Culture</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Clients</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Work</a>&nbsp;
                           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="">Contact</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
                           <div className="title-landing">
   <p className="gwd-p-v0bs gwd-gen-pb6igwdanimation">face to face / mcgarry bowen</p>
@@ -184,14 +196,14 @@ class Home extends Component {
                             </div>
                       </div>
                  </div>
-                 <div className="scrollwrap"><div className="scroll-text">Scroll</div><span class="scroll-line init"></span></div>
+                 <div className="scrollwrap sc1"><div className="scroll-text">Scroll</div><span class="scroll-line init"></span></div>
                       
               </div>
         </div> 
             <div className="sections" id="section2">
-            
+                <div class="scrollwraptop" ><div class="scroll-text"></div><span class="scroll-line init lineheight2"></span></div>
             <div className="inenr-sections">
-
+               <div className="left-illusion"></div>
              <div id="work" className="container" > 
                      <div className="topLine"></div>
                     <div className="row">
@@ -207,7 +219,23 @@ class Home extends Component {
                         </div>
                         
                         <div className="col-lg-8">
-                               <Projectcard  data={this.state.projectdata}/>
+
+                        {(() => {
+                            if(this.state.loading){
+                                return(
+
+                                    <Projectcard  data={this.state.projectdata}/>
+                                )
+                            }
+                            else{
+                                return(
+                                <center><div><img src="http://www.facetofaceuae.com/newimages/loading-gear.gif"/></div></center>
+                                )
+                            }
+                        })()}
+                                
+                         
+                               
       
 
                         </div>
@@ -218,32 +246,35 @@ class Home extends Component {
                    
                     <div className="row">
                          <div className="col-lg-6">
-                             <div className="buttonprojects">
+                            <a href="/work"> <div className="buttonprojects">
                                  <div className="slidingbackground"></div>
                                  <div className="text"> view all projects</div>
-
-                             </div>
+                             
+                             </div> </a>
                          </div>
                          <div className="col-lg-6 nav-container">
                                <div className="nav-arrows" >
-                                           <div className={'rightarrow '+btnClass} id="rightarrow" onClick={this.changeProjects}>
+                                           <div className={'rightarrow '+btnClass+" "+hidd} id="rightarrow" onClick={this.changeProjects}>
                                               <img src="http://facetofaceuae.com/newimages/arrow-right.jpg"   />
                                            </div>
-                                           <div className="leftarrow"  onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} onClick={this.changeProjectsBack}>
+                                           <div className={'leftarrow '+hidd2}  onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} onClick={this.changeProjectsBack}>
                                            <img src="http://facetofaceuae.com/newimages/arrow-left.jpg"  className="leftarrow-img" />
                                            </div>
                                </div>
                          </div>
+                         
                     </div>
-
+                     
              </div>
+             <div className="right-illusion"></div>
             </div>
 
             </div>
 
             
             <div class="sections" id="section3">
-                  
+                <div class="scrollwraptop" ><div class="scroll-text"></div><span class="scroll-line init lineheight2"></span></div>
+               
             <div className="inenr-sections">               
                   
              <div id="about" className="container"> 
@@ -258,16 +289,16 @@ class Home extends Component {
                           </div>     
                        
                           <p class="widthp">
-                          One that believes in the power of creativity to have a 
-                          transformational effect on companies, brands and communities.  
-                          Bring us your biggest problem. That's all we ask.   
+                          One that believes in the power of creativity to have a transformational effect on companies, brands and communities. 
+                          <br/> <br/>
+                          Bring us your biggest problem. That's all we ask.
                           </p>     
                           </div>
                           
                           
                       </div>  
                       <div className="col-lg-12 buttonarea">
-                      <a href="#/about" >
+                      <a href="about" >
                           <div className="buttonprojects">
                                  <div className="slidingbackground blue"></div>
                                  <div className="text">Learn more</div>
@@ -283,8 +314,9 @@ class Home extends Component {
 
 
              <div class="sections">
-
-
+             
+                
+                  
             <div id="culture" className="container"> 
                    <div className="row">
                        <div className="col-lg-12 culturewrapper">
@@ -302,10 +334,20 @@ class Home extends Component {
                           <div class="row">
                                    <div className="col-lg-5">
                                    <p>
-                                    We’re a group of good people. Gathered together over the years, <br/>
-                                    a collective of right-minded individuals, producing great work <br/>
+                                    We’re a group of good people. Gathered together over the years, 
+                                    a collective of right-minded individuals, producing great work 
                                     for clients we’re proud to represent.   <br/>
                                     </p>    
+
+                                    <div className="col-lg-12 buttonarea btncultr">
+                                    <a href="about" >
+                                        <div className="buttonprojects">
+                                                <div className="slidingbackground orange"></div>
+                                                <div className="text">Learn more</div>
+
+                                            </div>
+                                        </a>
+                                    </div> 
                                    
                                    </div>
                                    <div className="col-lg-3"><img src="http://www.facetofaceuae.com/newimages/cultr.jpg" /></div>
@@ -327,10 +369,13 @@ class Home extends Component {
                    </div>
 
              </div>
+              <Scrolltotop/>
+            
+
             </div>
              
             
-            
+                
            <Footer />
           
            </div>

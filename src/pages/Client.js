@@ -73,7 +73,7 @@ class Client extends Component {
                       
                  </div>
                  
-                      <img src="assests/images/arrow.png" className="scrollbtn bounce"/>
+                 <div className="scrollwrap"><div className="scroll-text">Scroll</div><span class="scroll-line init"></span></div>
                       
               </div>
 
@@ -88,38 +88,39 @@ class Client extends Component {
               <div  id="homeclientlogo" className="container">
                      <div className="row">
                     
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/1.jpg" alt="..." class="img-thumbnail"  /></div>
-                     <div className="logowrap col-sm-2"> <img src="http://www.facetofaceuae.com/newimages/logos/2.jpg" alt="..." class="img-thumbnail"  /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/3.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/4.jpg" alt="..." class="img-thumbnail"  /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/5.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/6.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/7.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/8.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/9.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/10.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/11.jpg" alt="..." class="img-thumbnail"/></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/12.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/13.jpg" alt="..." class="img-thumbnail"  /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/14.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/15.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/16.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/17.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/18.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/19.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/20.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/21.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/22.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/23.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/24.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/25.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/26.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/27.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/28.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/29.jpg" alt="..." class="img-thumbnail" /> </div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/30.jpg" alt="..." class="img-thumbnail"/></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/31.jpg" alt="..." class="img-thumbnail" /></div>
-                    <div className="logowrap col-sm-2">  <img src="http://www.facetofaceuae.com/newimages/logos/32.jpg" alt="..." class="img-thumbnail" /> </div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200">  <img src="http://www.facetofaceuae.com/newimages/logos/1.jpg" alt="..."  class="client-thumb"/> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200"> <img src="http://www.facetofaceuae.com/newimages/logos/2.jpg" alt="..."  class="client-thumb"/>  </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200"> <img src="http://www.facetofaceuae.com/newimages/logos/3.jpg" alt="..."  class="client-thumb"/>  </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200"> <img src="http://www.facetofaceuae.com/newimages/logos/4.jpg" alt="..."  class="client-thumb"/>  </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200"> <img src="http://www.facetofaceuae.com/newimages/logos/5.jpg" alt="..."  class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="100" data-aos-offset="200"> <img src="http://www.facetofaceuae.com/newimages/logos/6.jpg" alt="..."  class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="200" data-aos-offset="300"> <img src="http://www.facetofaceuae.com/newimages/logos/7.jpg" alt="..."  class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="200" data-aos-offset="300"> <img src="http://www.facetofaceuae.com/newimages/logos/8.jpg" alt="..."  class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="200" data-aos-offset="300"> <img src="http://www.facetofaceuae.com/newimages/logos/9.jpg" alt="..."  class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="200" data-aos-offset="300"> <img src="http://www.facetofaceuae.com/newimages/logos/10.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="200" data-aos-offset="300"> <img src="http://www.facetofaceuae.com/newimages/logos/11.jpg" alt="..." class="client-thumb"/>  </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="200" data-aos-offset="300"> <img src="http://www.facetofaceuae.com/newimages/logos/12.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="300" data-aos-offset="400"> <img src="http://www.facetofaceuae.com/newimages/logos/13.jpg" alt="..." class="client-thumb"  /></div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="300" data-aos-offset="400"> <img src="http://www.facetofaceuae.com/newimages/logos/14.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="300" data-aos-offset="400"> <img src="http://www.facetofaceuae.com/newimages/logos/15.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="300" data-aos-offset="400"> <img src="http://www.facetofaceuae.com/newimages/logos/16.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="300" data-aos-offset="400"> <img src="http://www.facetofaceuae.com/newimages/logos/17.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/18.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/19.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/20.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/21.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/22.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/23.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="400" data-aos-offset="500"> <img src="http://www.facetofaceuae.com/newimages/logos/24.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/25.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/26.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/27.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/28.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/29.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/30.jpg" alt="..." class="client-thumb"/>  </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"> <img src="http://www.facetofaceuae.com/newimages/logos/31.jpg" alt="..." class="client-thumb" /> </div></div>
+                    <div className="logowrap col-sm-2"> <div data-aos="zoom-in" data-aos-delay="500" data-aos-offset="600"
+                    > <img src="http://www.facetofaceuae.com/newimages/logos/32.jpg" alt="..." class="client-thumb" /> </div></div>
                      </div>
               </div>
             </div>

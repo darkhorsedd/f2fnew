@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { HashRouter as Router , Route,Switch } from 'react-router-dom';
+import { BrowserRouter as Router , Route,Switch, } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import Home from './pages/Home';
 import Culture from './pages/Culture';
@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Work from './pages/Work';
 import About from './pages/About';
 import $ from 'jquery';
+import "../node_modules/video-react/dist/video-react.css";
 class App extends Component {
 
   componentDidMount()
@@ -21,7 +22,7 @@ class App extends Component {
   render() {
     const baseUrl =window.location.href;
     return (
-      <Router>
+      <Router  >
      <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Culture" component={Culture} />

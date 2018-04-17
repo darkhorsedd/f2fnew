@@ -8,14 +8,42 @@ import ScrollMagic from 'scrollmagic';
 import 'animation.gsap';
 import 'debug.addIndicators';
 import Slider from 'react-slick'
+import Scrolltotop from '../components/scrolltotop';
 class Work extends Component {
 
+   
+    
+    
     componentDidMount() {
         window.scrollTo(0,0);
         
         var $this = $(ReactDOM.findDOMNode(this));
         this.handleLoad(this);
         this.WorkSection()
+        
+        $(document).ready(function(){
+            
+            $('.caseclick').click(function(e){
+               e.preventDefault();
+
+               if($(this).parent().parent().hasClass('slick-current'))
+               {
+                 window.location.href=$(this).attr('href');
+
+               }
+               else{
+                   return 0;
+               }
+            })
+        })
+            
+
+      }
+
+      clickhandler(e)
+      {
+        e.preventDefault();
+        console.log(e);
       }
 
       handleLoad(x) {
@@ -55,6 +83,8 @@ class Work extends Component {
        {
            $('#work').height(window.innerHeight-200);
        }
+
+      
 
 
   render() {
@@ -106,10 +136,14 @@ class Work extends Component {
                
 
                 <Slider {...settings}>
-                    <div class="clip"><div><a href="#/portfolio/100-YEARS-OF-ZAYED"><img src="http://www.facetofaceuae.com/newimages/creative-image.jpg"/><h2>Barbican. This is us.</h2></a></div></div>
-                    <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image2.jpg"/><h2>Barbican. This is us.</h2></div></div>
-                    <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image3.jpg"/><h2>Barbican. This is us.</h2></div></div>    
-                    <div class="clip"><div><img src="http://www.facetofaceuae.com/newimages/creative-image2.jpg"/><h2>Barbican. This is us.</h2></div></div>              
+                    <div class="clip"><div><a href="portfolio/Parker-Jotter-London" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/parker500.jpg"/><h2>PARKER “CLICK”</h2></a></div></div>
+                    <div class="clip"><div><a href="portfolio/Aldar-academies-re-brand" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/aldar500.jpg"/><h2>Aldar Acadamies Re-Branding</h2></a></div></div>
+                    <div class="clip"><div><a href="portfolio/Legoland-dubai-halloween" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/lego500.jpg"/><h2>Legoland Dubai Halloween</h2></a></div></div>    
+                    <div class="clip"><div><a href="portfolio/Vimto-ramadan-snapchat" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/vimto500.jpg"/><h2>VIMTO RAMADAN SNAPCHAT</h2></a></div></div>              
+                    <div class="clip"><div><a href="portfolio/Rani-super-orange" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/rani500.jpg"/><h2>RANI SUPER ORANGE</h2></a></div></div>
+                    <div class="clip"><div><a href="portfolio/Royal-and-sun-alliance–motor-insurance" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/rsa500.jpg"/><h2>RSA Insurance</h2></a></div></div>
+                    <div class="clip"><div><a href="portfolio/100-years-of-zayed" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/ethihad500.jpg"/><h2>A HUNDRED YEARS OF ZAYED</h2></a></div></div>
+                    <div class="clip"><div><a href="portfolio/Operation-falafel-street-food" className="caseclick"  ><img src="http://www.facetofaceuae.com/newimages/op500.jpg"/><h2>Operation Falafel Social Media</h2></a></div></div>
                 </Slider>
                 </div>
 
@@ -124,9 +158,9 @@ class Work extends Component {
                <div class="row">
                {/*project */}
                    <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/parker500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">PARKER “CLICK”</div>
                          </div>
                        </div>
                    </div>
@@ -134,9 +168,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/aldar500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">Aldar Acadamies Re-Branding</div>
                          </div>
                        </div>
                    </div>
@@ -144,9 +178,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/vimto500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">VIMTO RAMADAN SNAPCHAT</div>
                          </div>
                        </div>
                    </div>
@@ -154,9 +188,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/rani500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">RANI SUPER ORANGE</div>
                          </div>
                        </div>
                    </div>
@@ -164,9 +198,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/rsa500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">RSA Insurance</div>
                          </div>
                        </div>
                    </div>
@@ -174,9 +208,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/ethihad500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">A HUNDRED YEARS OF ZAYED</div>
                          </div>
                        </div>
                    </div>
@@ -184,9 +218,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/op500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">Operation Falafel Social Media</div>
                          </div>
                        </div>
                    </div>
@@ -194,9 +228,9 @@ class Work extends Component {
 
                   {/*project */}
                   <div class="col-lg-3">
-                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/project-images.jpg')"> 
+                       <div class="projectthumb" Style="background-image:url('http://www.facetofaceuae.com/newimages/lego500.jpg')"> 
                          <div className="hovertext-wraper">
-                            <div className="inner-hover">Barbican. This is us.</div>
+                            <div className="inner-hover">Legoland Dubai Halloween</div>
                          </div>
                        </div>
                    </div>
@@ -205,6 +239,10 @@ class Work extends Component {
                  <div className="spacer100"></div>
                </div>
 
+
+
+               <Scrolltotop/>
+   
              </div>
 
             

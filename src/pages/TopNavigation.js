@@ -12,7 +12,7 @@ class TopNavigation extends Component {
             <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
             <img src="../assests/images/logo.jpg" className="main-logo" />
             </a>
         
@@ -20,21 +20,21 @@ class TopNavigation extends Component {
             <ul className="navbar-nav ml-auto">
            
            
-                <li className="nav-item worklink">
-                <NavLink className="nav-link" exact to="/Work" activeClassName="active">Work</NavLink>
+                <li className="nav-item ">
+                 <NavLink className="nav-link" exact to="/Work" activeClassName="active">Work</NavLink>
                 </li>
-                <li className="nav-item culturelink">
-                <NavLink className="nav-link" exact to="/Culture" activeClassName="active">Culture</NavLink>
+                <li className="nav-item">
+                 <NavLink className="nav-link" exact to="/Culture" activeClassName="active">Culture</NavLink>
                 </li>
-                <li className="nav-item aboutlink">
-                <NavLink className="nav-link"  to="/about" activeClassName="active">About</NavLink>
+                <li className="nav-item">
+                 <NavLink className="nav-link"  to="/about" activeClassName="active">About</NavLink>
                 </li>
                 
-                <li className="nav-item clientlink">
-                <NavLink className="nav-link" exact to="/clients" activeClassName="active">Clients</NavLink>
+                <li className="nav-item">
+                 <NavLink className="nav-link" exact to="/clients" activeClassName="active">Clients</NavLink>
                 </li>
-                <li className="nav-item contactlink">
-                <NavLink className="nav-link" exact to="/Contact" activeClassName="active">Contact</NavLink>
+                <li className="nav-item">
+                 <NavLink className="nav-link" exact to="/Contact" activeClassName="active">Contact</NavLink>
                 </li>
               
               
